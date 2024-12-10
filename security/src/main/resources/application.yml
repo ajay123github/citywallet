@@ -1,0 +1,8 @@
+spring:
+  security:
+    user:
+      name: JavaTechie
+      password: password
+   
+server:
+  port: 8181
