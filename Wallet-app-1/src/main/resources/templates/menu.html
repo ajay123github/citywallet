@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		
+		#amounttag{
+			border: 1px solid black;
+			display: inline-block;
+		}
+#infotag{
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+	display:inline-block;
+}
+	</style>
+
+</head>
+
+<body>
+    <h1>
+        WALLET APP
+    </h1>
+
+<button type="button">Filter</button>
+
+<div th:each="transactiondetails:${id}" id="infotag" >
+	<span th:text="${transactiondetails.category}"></span><br>
+	<span th:text="${transactiondetails.type}"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<span>-</span> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	<div id="amounttag">      
+	<span th:text="${transactiondetails.amountspend}"></span>
+	</div> 
+	<span th:text="${transactiondetails.date}"></span>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span th:text="${transactiondetails.time}"></span>
+	<br>
+</div>
+
+</body>
+</html>
