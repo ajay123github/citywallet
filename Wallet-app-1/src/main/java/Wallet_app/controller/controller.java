@@ -14,6 +14,7 @@ import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -117,6 +118,12 @@ public class controller {
 		}
 	}
 	
+	
+	@GetMapping("/newdate")
+	public Date newDate() {
+		return new Date();
+		//Add Date Print Code here
+	}
 	
 	@GetMapping("/transaction/time")
 	public List<Transactiondto> getTime(@RequestParam String time){
