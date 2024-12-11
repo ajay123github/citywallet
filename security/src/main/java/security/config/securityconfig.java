@@ -32,14 +32,15 @@ public class securityconfig {
 		
 		return new InMemoryUserDetailsManager(admin,user);
 	}
-//	
-//	@Bean
-//	public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-//		return httpSecurity.csrf().disable()
-//		.authorizeHttpRequests().requestMatchers("") .permitAll().and()
-//				.authorizeHttpRequests().requestMatchers("/rest/security/msg").authenticated().and()
-//		.formLogin().and().build();
-//	}
+	
+	@Bean
+	public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
+		 httpSecurity.csrf().disable().authorizeHttpRequests(auth->{
+			 auth.requestMatchers("/rest1/security/loginform").authenticated().anyRequest().denyAll();
+		 }).httpBasic();
+		 
+		 return httpSecurity.build();
+	}
 	
 	@Bean
 	public PasswordEncoder passwordEncoder() {
