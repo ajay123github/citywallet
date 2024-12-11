@@ -120,7 +120,7 @@ public class controller {
 	
 	
 	@GetMapping("/newdate")
-	public Date newDate() {
+	public Date newDate1() {
 		return new Date();
 		//Add Date Print Code here
 	}
