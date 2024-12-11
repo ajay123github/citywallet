@@ -15,7 +15,9 @@ public class security {
 	}
 	
 	@GetMapping("/message")
+
 	public String Message3() {
 		return "Come to Move ontone";
 	}
+
 }
