@@ -19,7 +19,7 @@ public class Applicationcontroller {
 	
 	@GetMapping("/loginform")
 	public ModelAndView login() {
-		ModelAndView mv=new ModelAndView("login.html");
+		ModelAndView mv=new ModelAndView("main.html");
 		return mv;
 	}
 }
