@@ -17,9 +17,5 @@ public class Applicationcontroller {
 		return "Spring Boot Security";
 	}
 	
-	@GetMapping("/loginform")
-	public ModelAndView login() {
-		ModelAndView mv=new ModelAndView("main.html");
-		return mv;
-	}
+	
 }
