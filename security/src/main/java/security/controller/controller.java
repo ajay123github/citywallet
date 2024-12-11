@@ -17,4 +17,16 @@ public class controller {
 		return mv;
 	}
 	
+	@GetMapping("/loginform2")
+	@PreAuthorize("hasRole('ADMIN')")
+	public String Msg() {
+		return "Message";
+	}
+	
+	@GetMapping("/loginform3")
+	@PreAuthorize("hasRole('ADMIN')")
+	public String Msg1() {
+		return "Message";
+	}
+	
 }

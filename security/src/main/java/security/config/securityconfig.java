@@ -36,7 +36,8 @@ public class securityconfig {
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
 		 httpSecurity.csrf().disable().authorizeHttpRequests(auth->{
-			 auth.requestMatchers("/rest1/security/loginform").authenticated().anyRequest().denyAll();
+			 auth.requestMatchers("/rest1/security/loginform,/rest1/security/loginform2","/rest1/security/loginform3")
+			 .authenticated().anyRequest().denyAll();
 		 }).httpBasic();
 		 
 		 return httpSecurity.build();
